@@ -1,0 +1,38 @@
+
+var ftGUID_5183731="5027C6889852C8";
+var ftConfID_5183731="26196108";
+var ftParams_5183731="ftx=&fty=&ftadz=&ftscw=ebuy=25094977;esid=6522286;epid=290605293;ecid=142028304;eadv=4053494;eaid=484080058;erid=142262378;eexpid=;eexcid=;erv=1;eiid=CMKA2r6XiPQCFUK7ZAoduHwL8w;&ft_custom=4053494__25094977__6522286__142028304&ftOBA=1&ft_ifb=1&ft_domain=www4.lunapic.com&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww4.lunapic.com%2F&ft_keyword=290605293&ft_section=73207671850422280580892877526500297907%7C%7C290605293&gdpr=0&gdpr_consent=&us_privacy=${US_PRIVACY}&cachebuster=714518.1543284098";
+var ftKeyword_5183731="290605293";
+var ftCustom_5183731="4053494__25094977__6522286__142028304";
+var ftSection_5183731="73207671850422280580892877526500297907||290605293";
+var ftSegment_5183731="aanx,ag2g";
+var ftSegmentList_5183731=[{s:'aanx',t:50270000},{s:'ag2g'}];
+var ftRuleMatch_5183731="00011000";
+var ftTimestamp_5183731="1636354925";
+var ftGeoC2_5183731="us";
+var ftGeoState_5183731="wa";
+var ftGeoCity_5183731="edmonds";
+var ftISP_5183731="comcast cable communications inc.";
+var ftSpeed_5183731="cable";
+var ftDMA_5183731="819";
+var ftLong_5183731="-122.34";
+var ftLat_5183731="47.84";
+var ftPostal_5183731="98026";
+var ftTimeZone_5183731="-800";
+var ftMobileCarrier_5183731="";
+var ftImp5183731 = {};
+ftImp5183731.privacy = "x";
+ftImp5183731.guidAge = "33";
+ftImp5183731.impID = "90E732DE-58DE-8F19-5E16-53F7E70164F8";
+ftImp5183731.duid = "FT:5027C6889852C8";
+
+ftImp5183731.ft_tpplid = "";
+ftImp5183731.ft_c = {};
+ftImp5183731.gdpr = "0";
+ftImp5183731.gdpr_consent = "";
+ftImp5183731.gdpr_pd = "";
+ftImp5183731.oob_consent = "";
+ftImp5183731.gdprStoredConsent = "";
+ftImp5183731.us_privacy = "!!US_PRIVACY!";
+
+document.write('<scr'+'ipt src="https://cdn.flashtalking.com/xre/518/5183731/3594042/js/j-5183731-3594042.js" id="ftscript_m5183731" name="ftscript_m5183731"></scr'+'ipt>');

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://cdn.flashtalking.com/110417/3594042/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style></style><meta name="ad.size" content="width=728,height=90">
+<script type="text/javascript"> 
+	var clickTag = "https://xfinity.com/";
+</script>
+	
+<script src="./gsap_3.5.1_min.js.download"></script>
+<script src="./jquery.min.js(1).download"></script>
+<script src="./SplitText.min.js.download"></script>
+
+<link rel="stylesheet" type="text/css" href="./style.css">
+	
+<style rel="stylesheet" type="text/css">
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+}
+body, body * {
+	vertical-align: baseline;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+#container {
+	position: absolute;
+	width: 728px;
+	height: 90px;
+	border: 1px solid #aaaaaa;
+	overflow: hidden;
+	opacity: 1;
+	box-sizing: border-box;
+	visibility: hidden;
+}
+
+div {
+	position: absolute;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
+img {
+	position: absolute;
+	backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+}
+#bg {
+	background: #ffffff;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.copy{
+	font-size:18px;
+	line-height: 20px;
+	opacity: 1;
+	position: relative;
+	display: table-cell;
+    vertical-align:top;
+	text-align: left;
+	width: 100%;
+    letter-spacing: -0.8px;
+	display: block;
+	color: #fff;
+}
+
+.copyHolder{
+	display: table;
+	top: 9px;
+	left: 9px;
+	height: 160px;
+	width: 50%;
+	opacity: 1;
+	overflow: hidden;
+}
+#frame1Copy div, #frame2Copy div, #frame3Copy div, #frame4Copy div{
+		opacity: 1;
+}
+#frame1Copy > div, #frame2Copy > div, #frame3Copy > div, #frame4Copy > div{
+	overflow: hidden;
+}
+.legal{
+	font-size: 9px;
+	line-height: 9px;
+	letter-spacing: -.1px;
+	color: #fff;
+	left: inherit;
+	right: 9px;
+	top: 9px;
+	position: absolute;
+	display: block;
+	opacity: 1;
+	text-align: right;
+}
+#imagery{
+	position: absolute; 
+	left: 50%; 
+	opacity: 1; 
+	height: 100%; 
+	width: 50%;
+}
+
+#phone {
+	position: absolute;
+	left: 9px;
+    top: 16px;
+    opacity: 1;
+	height: auto;
+	transition: all .2s ease-out;
+	height:158px;
+}
+#phone img{	
+	max-width: 98px;
+	max-height: 158px;
+	top: 0;
+}
+	
+#phoneLogo {
+	position: absolute;
+    width: 116px;
+    height: 20px;
+	left: 80px;
+    bottom: 0px;
+    opacity: 1;
+	text-align: center;
+	transition: all .2s ease-out;
+}
+#phoneLogo img{
+	top: 0px;
+	height: auto;
+	width: 100%;
+	position: relative;
+}
+#logo {
+	width: 131px;
+	height: 21px;
+	left: 9px;
+	bottom: 5px;
+	opacity: 1;
+	position: absolute;
+}
+#cta {
+	background: #28a2db;
+	color: #ffffff;
+    border-radius: 4px;
+    right: 11px;
+    bottom: 11px;
+    opacity: 1;
+	padding: 11px 22px;
+}
+#ctaCopy{
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	padding: 0 0px;
+	white-space: nowrap;
+}
+#cta:after {
+    border-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+#cta:hover:after {
+    width: 120%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#clickarea {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+#clicker{
+	width: 100%;
+	height: 100%;
+}
+.area{
+	width: 50%;
+	height: 100%;
+	opacity: 1;
+	left: 50%;
+	background: #8B8B97;
+}
+#area1{
+	left: 0;
+	background: #ffffff;
+}
+
+</style>
+</head>
+<body class="animate" data-new-gr-c-s-check-loaded="14.1038.0" data-gr-ext-installed="">
+<div id="container" style="cursor: pointer; visibility: visible;">
+	<div id="bg"></div>
+	<div id="area1" class="area"></div>
+	<div id="area2" class="area" style="background-color: rgb(31, 105, 255);"></div>
+	<div id="area3" class="area" style="background-color: rgb(0, 133, 88); transform: translate(0px, 90px);"></div>
+	<div id="area4" class="area" style="background-color: rgb(31, 105, 255); transform: translate(0px, 90px);"></div>
+	<div id="area5" class="area" style="background-color: rgb(0, 133, 88); transform: translate(0px, 90px);"></div>
+	<div></div>
+	<div class="copyHolder" id="frame1CopyHolder">
+			<ft-dynamic name="frame1Copy" id="frame1Copy" class="xsb copy" style="font-size: 19px; line-height: 21px; color: rgb(31, 105, 255);"><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word1">Your</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word2">phone</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word3">deserves</div></div><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word4">a</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word5">fast</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word6">5G</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word7">network.</div></div></ft-dynamic>
+	</div>
+	<div class="copyHolder" id="frame2CopyHolder">
+			<ft-dynamic name="frame2Copy" id="frame2Copy" class="xsb copy" style="font-size: 19px; line-height: 21px; color: rgb(0, 133, 88);"><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word1">And</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word2">you</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word3">deserve</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word4">the</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word5">most</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word6">reliable</div></div><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word7">network</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word8">at</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word9">no</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word10">extra</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word11">cost.</div></div></ft-dynamic>  
+	</div>
+	<div class="copyHolder" id="frame3CopyHolder">
+			<ft-dynamic name="frame3Copy" id="frame3Copy" class="xsb copy" style="font-size: 19px; line-height: 21px; color: rgb(31, 105, 255);"><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word1">Score</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word2">the</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word3">best</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word4">price</div></div><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word5">on</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word6">unlimited</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word7">5G</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word8">data.</div></div></ft-dynamic> 
+	</div>
+	<div class="copyHolder" id="frame4CopyHolder">
+			<ft-dynamic name="frame4Copy" id="frame4Copy" class="xsb copy" style="font-size: 19px; line-height: 21px; color: rgb(0, 133, 88);"><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word1">Keep</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word2">your</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word3">phone.</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word4">Switch</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word5">networks.</div></div><div style="display: block; text-align: left; position: relative;"><div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word6">Get</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word7">$50</div> <div style="position: relative; display: inline-block; transform: translate(0px, 40px);" class="word word8">back.</div></div></ft-dynamic>
+	</div>
+	<ft-dynamic name="legal1" id="legal1" class="legal xsc" style="opacity: 0; transform: translate(0px, 10px);"></ft-dynamic>
+	<ft-dynamic name="legal2" id="legal2" class="legal xsc" style="opacity: 0; transform: translate(0px, 10px);"></ft-dynamic>
+	<ft-dynamic name="legal3" id="legal3" class="legal xsc" style="opacity: 0; transform: translate(0px, 10px);">When you get 4 lines.<br>No per line access fee.</ft-dynamic>
+	<ft-dynamic name="legal4" id="legal4" class="legal xsc" style="opacity: 0; transform: translate(0px, 10px);">Req. new line, number<br>transfer and device plan.</ft-dynamic>
+	<div id="imagery">
+		<ft-dynamic name="phoneImg" id="phone"><img src="./XMPromo_BYOD_728x90.png"></ft-dynamic>
+		<ft-dynamic name="phoneLogo" id="phoneLogo"><img src="./clear.png"></ft-dynamic> 
+	</div>
+	<ft-dynamic name="logo" id="logo"><img src="./XM_logo.svg"></ft-dynamic>
+	
+	<div id="cta" style="background-color: rgb(255, 255, 255);">
+		<ft-dynamic name="ctaCopy" id="ctaCopy" class="xsb" style="color: rgb(0, 0, 0); font-size: 9px;">Switch Now</ft-dynamic> 	
+	</div>
+	
+</div>
+
+<script>
+	
+    // Function to preload dynamic images 
+    function preloadDynamicVarImages() {
+        var _loadedImages=0;
+        //Preload all dynamic images 
+        var iavars = myFT.manifestProperties.instantAds;
+        var dImgArr = [];
+        for (var i = 0; i < iavars.length; i++) {
+            if (iavars[i].type == "image"){            
+                dImgArr.push(iavars[i].name);
+            } 
+        };    
+        for (var l = 0; l < dImgArr.length; l++) {
+            this["dimg" + l] = new Image();
+            this["dimg" + l].addEventListener('load', function() {
+                _loadedImages++;
+                if (_loadedImages == dImgArr.length) startAd();
+            });
+            this["dimg" + l].src = myFT.instantAds[dImgArr[l]];
+        }
+    };
+	
+	function startAd() {
+		var configString = myFT.instantAds.adSettings.replace(/'/g, '"'); 
+		configObject = JSON.parse(configString); 
+
+		// Set colors
+		
+		// Orange: e64f00
+		// Red: e6004d
+		// Blue: 1f69ff
+		// Green: 008558
+		// Purple: 6138f5
+
+		$('#cta').css( "background-color", configObject.ctaColor );
+		$('#ctaCopy').css( "color", configObject.ctaText );
+		$('#ctaCopy').css( "font-size", configObject.ctaSize+"px" );
+		$('.copy').css( "font-size", configObject.fontSize +"px" );
+		$('.copy').css( "line-height", (eval(configObject.fontSize)+2) +"px" );
+		$('.copy').css( "color", configObject.baseColor );
+		$('#area2').css( "background-color", configObject.altColor );
+		$('#area3').css( "background-color", configObject.baseColor );
+		$('#area4').css( "background-color", configObject.altColor );
+		$('#area5').css( "background-color", configObject.baseColor );
+		
+		$('#frame1Copy').css( "color", configObject.altColor );
+		$('#frame2Copy').css( "color", configObject.baseColor );
+		$('#frame3Copy').css( "color", configObject.altColor );
+		$('#frame4Copy').css( "color", configObject.baseColor );
+		
+		$('#legal').css( "color", configObject.legalColor );
+
+		
+		$('#container').hover(
+		  function() {
+			  $('#phone').css({ transform: 'scale(1.05)' });
+			  $('#phoneLogo').css({ left: '86px' });
+			  $('#cta').css({ background: '#000' });
+			  $('#ctaCopy').css({ color: '#fff' });
+		  }, function() {
+			  $('#phone').css({ transform: 'scale(1)' });
+			  $('#phoneLogo').css({ left: '80px' });
+			  $('#cta').css({ background: '#fff' });
+			  $('#ctaCopy').css({ color: '#000' });
+		  }
+		);
+		var tl = gsap.timeline(), 
+    	frame1Text = new SplitText("#frame1Copy", {type:"lines, words", wordsClass:"word word++"}), 
+    	frame1Words = frame1Text.words,
+		frame2Text = new SplitText("#frame2Copy", {type:"lines, words", wordsClass:"word word++"}), 
+    	frame2Words = frame2Text.words,
+		frame3Text = new SplitText("#frame3Copy", {type:"lines, words", wordsClass:"word word++"}), 
+    	frame3Words = frame3Text.words,
+		frame4Text = new SplitText("#frame4Copy", {type:"lines, words", wordsClass:"word word++"}),
+    	frame4Words = frame4Text.words; 
+
+		tl.to(container,0,{visibility:'visible'})
+
+		tl.from(frame1Words, {duration: 0.25, y:40, ease:"Power2.easeOut", stagger: 0.03}, "+=0");
+		tl.from(legal1, {duration: 0.25, y:10, opacity:0, ease:Power2.easeOut}, "-=0");
+		tl.to(frame1Words, {duration: 0.25, y:-40, ease:"Power2.easeOut", stagger: 0.03}, "+=2.4");
+		tl.to(legal1, {duration: 0.25, opacity:0, ease:Power2.easeOut}, "-=.25");
+
+		tl.from(area3, .5, {y:90, ease:"Power2.easeOut"}, "-=.75");
+		
+		tl.from(frame2Words, {duration: 0.25, y:40, ease:"Power2.easeOut", stagger: 0.03}, "-=.5");
+		tl.from(legal2, {duration: 0.25, y:10, opacity:0, ease:Power2.easeOut}, "-=0");
+		tl.to(frame2Words, {duration: 0.25, y:-40, ease:"Power2.easeOut", stagger: 0.03}, "+=2.4");
+		tl.to(legal2, {duration: 0.25, opacity:0, ease:Power2.easeOut}, "-=.25");
+		
+		tl.from(area4, .5, {y:90, ease:"Power2.easeOut"}, "-=.75");
+		
+		tl.from(frame3Words, {duration: 0.25, y:40, ease:"Power2.easeOut", stagger: 0.03}, "-=.5");
+		tl.from(legal3, {duration: 0.25, y:10, opacity:0, ease:Power2.easeOut}, "-=0");
+		tl.to(frame3Words, {duration: 0.25, y:-40, ease:"Power2.easeOut", stagger: 0.03}, "+=2.4");
+		tl.to(legal3, {duration: 0.25, opacity:0, ease:Power2.easeOut}, "-=.25");
+		
+		tl.from(area5, .5, {y:90, ease:"Power2.easeOut"}, "-=.75");
+		
+		tl.from(frame4Words, {duration: 0.25, y:40, ease:"Power2.easeOut", stagger: 0.03}, "-=.5");
+		
+		tl.from(legal4, {duration: 0.25, y:10, opacity:0, ease:Power2.easeOut}, "-=0");
+
+	};
+</script>
+<script src="./html5API.js.download"></script>
+
+<script>
+        if(myFT.$('#container').length > 0){ 
+			var container = myFT.$('#container')
+			} 
+		myFT.applyClickTag(container,1);
+</script>
+<script>
+	//1), using FT api, check that the DOMLoaded event has fired
+	myFT.on('DOMLoaded', function() {
+		//2) listen for instantAds event is dispatched
+		myFT.on("instantads", function(){
+				//3) preload dynamic images
+				preloadDynamicVarImages();
+		});
+	});
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

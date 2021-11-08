@@ -1,0 +1,81 @@
+
+
+
+
+/* ControlTag Loader for Georgia-Pacific de86de70-9c70-4541-b91f-08fbcdfcbfb8 */
+(function(w, cs) {
+  
+  if (/Twitter for iPhone/.test(w.navigator.userAgent || '')) {
+    return;
+  }
+
+  var debugging = /kxdebug/.test(w.location);
+  var log = function() {
+    
+    debugging && w.console && w.console.log([].slice.call(arguments).join(' '));
+  };
+
+  var load = function(url, callback) {
+    log('Loading script from:', url);
+    var node = w.document.createElement('script');
+    node.async = true;  
+    node.src = url;
+
+    
+    node.onload = node.onreadystatechange = function () {
+      var state = node.readyState;
+      if (!callback.done && (!state || /loaded|complete/.test(state))) {
+        log('Script loaded from:', url);
+        callback.done = true;  
+        callback();
+      }
+    };
+
+    
+    var sibling = w.document.getElementsByTagName('script')[0];
+    sibling.parentNode.insertBefore(node, sibling);
+  };
+
+  var config = {"app":{"name":"krux-scala-config-webservice","version":"3.42.4","schema_version":3},"confid":"ugh8ubx6k","context_terms":[],"publisher":{"name":"Georgia-Pacific","active":false,"uuid":"de86de70-9c70-4541-b91f-08fbcdfcbfb8","version_bucket":"stable","id":2221},"params":{"first_party_dmp_managed":true,"link_header_bidder":false,"site_level_supertag_config":"site","recommend":false,"control_tag_pixel_throttle":100,"fingerprint":false,"optout_button_optout_text":"Browser Opt Out","channel":"video","user_data_timing":"load","consent_active":true,"use_central_usermatch":true,"store_realtime_segments":false,"tag_source":false,"link_hb_start_event":"ready","optout_button_optin_text":"Browser Opt In","first_party_uid":true,"link_hb_timeout":2000,"link_hb_adserver_subordinate":true,"optimize_realtime_segments":false,"link_hb_adserver":"dfp","client_type":"marketer","target_fingerprint":false,"context_terms":true,"optout_button_id":"kx-optout-button","dfp_premium":true,"control_tag_namespace":"gp"},"prioritized_segments":[],"realtime_segments":[],"services":{"userdata":"//cdn.krxd.net/userdata/get","contentConnector":"https://connector.krxd.net/content_connector","stats":"//apiservices.krxd.net/stats","optout":"//cdn.krxd.net/userdata/optout/status","event":"//beacon.krxd.net/event.gif","set_optout":"https://consumer.krxd.net/consumer/optout","data":"//beacon.krxd.net/data.gif","link_hb_stats":"//beacon.krxd.net/link_bidder_stats.gif","userData":"//cdn.krxd.net/userdata/get","link_hb_mas":"https://link.krxd.net/hb","config":"//cdn.krxd.net/controltag/{{ confid }}.js","social":"//beacon.krxd.net/social.gif","addSegment":"//cdn.krxd.net/userdata/add","pixel":"//beacon.krxd.net/pixel.gif","um":"https://usermatch.krxd.net/um/v2","controltag":"//cdn.krxd.net/ctjs/controltag.js.{hash}","loopback":"https://consumer.krxd.net/consumer/tmp_cookie","remove":"https://consumer.krxd.net/consumer/remove/de86de70-9c70-4541-b91f-08fbcdfcbfb8","click":"https://apiservices.krxd.net/click_tracker/track","stats_export":"//beacon.krxd.net/controltag_stats.gif","userdataApi":"//cdn.krxd.net/userdata/v1/segments/get","cookie":"//beacon.krxd.net/cookie2json","proxy":"//cdn.krxd.net/partnerjs/xdi","consent_get":"https://consumer.krxd.net/consent/get/de86de70-9c70-4541-b91f-08fbcdfcbfb8","consent_set":"https://consumer.krxd.net/consent/set/de86de70-9c70-4541-b91f-08fbcdfcbfb8","is_optout":"https://beacon.krxd.net/optout_check","impression":"//beacon.krxd.net/ad_impression.gif","transaction":"//beacon.krxd.net/transaction.gif","log":"//jslog.krxd.net/jslog.gif","portability":"https://consumer.krxd.net/consumer/portability/de86de70-9c70-4541-b91f-08fbcdfcbfb8","set_optin":"https://consumer.krxd.net/consumer/optin","usermatch":"//beacon.krxd.net/usermatch.gif"},"experiments":[],"site":{"name":"Brawny Media Tag","cap":2,"id":1679060,"organization_id":2221,"uid":"ugh8ubx6k"},"tags":[],"usermatch_tags":[{"id":6,"name":"Google User Match","content":"<script>\r\n(function() {\r\n\r\nvar kuid = Krux('get', 'user');\r\n  if(kuid){\r\n  // original google user match tag. will be deprecated june 1, 2020\r\n  new Image().src = 'https://usermatch.krxd.net/um/v2?partner=google';\r\n\r\n  // new google user match where they host the match table. The KUID needs to be base64 encoded, but the ids sent will be regular kuids\r\n  var baseEncodedKuid = btoa(kuid).replace(/=$/, '');\r\n  new Image().src = 'https://cm.g.doubleclick.net/pixel?google_nid=krux_digital&google_hm='+baseEncodedKuid;\r\n  }\r\n\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":15,"name":"TheTradeDesk User Match","content":"<script>\r\n(function(){\r\nvar kuid = Krux('get', 'user');\r\nvar consent = Krux('iab:urlParams');\r\nif (kuid) {\r\nif(!consent){\r\nconsent = \"\";\r\n}\r\nvar p = location.protocol == 'https:' ? 'https:' : 'http:';\r\nvar purl = '//match.adsrvr.org/track/cmf/generic?ttd_pid=krux&ttd_tpi=1';\r\n(new Image()).src  = p + purl + consent; \r\n}\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":21,"name":"Acxiom","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\n      var i = new Image();\n      i.src = liveramp_url;      \n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":45,"name":"TubeMogul user match","content":"<script>\r\n    (function() {\r\n        new Image().src = location.protocol + '//sync-tm.everesttech.net/upi/pid/NC4WTmcy?redir=' + encodeURIComponent('https://beacon.krxd.net/usermatch.gif?partner_id=cb276571-e0d9-4438-9fd4-80a1ff034b01&puid=${TM_USER_ID}');\r\n    })();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":57,"name":"Innovid User Matching","content":"<script>\r\n(function(){\r\n         var prefix = window.location.protocol == 'https:' ? \"https:\" : \"http:\";\r\n         var i_url = prefix + '//ag.innovid.com/dv/sync?tid=2';\r\n         var i = new Image();\r\n         i.src = i_url;\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":71,"name":"Xandr Connect","content":"<script>\r\n(function(){\r\n        var kuid = Krux('get', 'user');\r\n        var consent = Krux('iab:urlParams');\r\n        if (kuid) {\r\n            if(!consent){\r\n                consent = \"\";\r\n            }\r\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\r\n            var kurl = prefix + '//beacon.krxd.net/usermatch.gif?adnxs_uid=$UID';\r\n            var appnexus_url = '//ib.adnxs.com/getuid?' + kurl + consent;\r\n            (new Image()).src=appnexus_url;\r\n        }\r\n})();\r\n</script>\r\n\r\n<!-- Krux Config:\r\n\r\n-->","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":76,"name":"LiveRamp User Matching","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\r\n      var i = new Image();\r\n      i.src = liveramp_url;     \r\n  }\r\n})();\r\n</script>\r\n\r\n\r\n<!-- Krux Config:\r\n\r\n-->","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":81,"name":"Bombora","content":"<script>\r\n\r\n(function () {\r\n_ml = window._ml || {};\r\n_ml.pub = '748';\r\n_ml.redirect = '//beacon.krxd.net/usermatch.gif?partner=madisonlogic&partner_uid=[PersonID]';\r\nvar s = document.getElementsByTagName('script')[0], cd = new Date(), mltag = document.createElement('script');\r\nmltag.type = 'text/javascript'; mltag.async = true;\r\nmltag.src = '//ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth() + cd.getFullYear();\r\ns.parentNode.insertBefore(mltag, s);\r\n})();\r\n\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":86,"name":"Neustar AdAdvisor S2S","content":"<script>\r\n(function(){\r\nvar kuid = Krux('get', 'user');\r\nvar prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\r\nif (kuid) {\r\n    new Image().src = prefix + '//aa.agkn.com/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e';\r\n     }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":99,"name":"Amazon User Match Pixel","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\n\n  if (kuid) {\n      var partner_url = prefix +'//s.amazon-adsystem.com/ecm3?ex=krux.com&id=' + kuid;\n      new Image().src = partner_url;\n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":1,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":17,"name":"Twitter User Match","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n      var url = \"https://analytics.twitter.com/i/adsct?p_user_id=\" + kuid + \"&p_id=10623\";\r\n      var i = new Image();\r\n      i.src = url;     \r\n  }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":20,"name":"Yahoo! DataX User Match","content":"<script>\r\n(function(){\r\n    var kuid = Krux('get', 'user');\r\n        if (kuid) {\r\n            var prefix = 'https:';\r\n            var rurl = prefix + '//cms.analytics.yahoo.com/cms?partner_id=KRUX';\r\n            var i = new Image();\r\n            i.src = rurl;\r\n        }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":47,"name":"Tremor User Match","content":"<script>\n(function(){\n    var kuid = window.Krux('get', 'user');\n    if (kuid) {\n       new Image().src = '//dt.scanscout.com/ssframework/uid?UIKX=' + kuid + '&url=' + location.protocol + '//beacon.krxd.net/usermatch.gif%3Fpartner_id%3Dtremor%26partner_uid%3D%5BUSER_ID%5D';\n    }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":85,"name":"IXI Digital Open Market","content":"<script>\r\n(function(){\r\n    var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\r\n    new Image().src = prefix + '//kr.ixiaa.com/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif';\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":2,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":72,"name":"Xandr Extension User Match","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  var cbust = Math.round(new Date().getTime() / 1000);\r\n  if (kuid) {\r\n    Krux('require:http').pixel({\r\n      url: \"//ib.adnxs.com/pxj\",\r\n      data: {\r\n          bidder: '140',\r\n          seg: '381342',\r\n          action: \"setuid('\" + kuid + \"')\",\r\n          bust: cbust\r\n      }});\r\n  }\r\n  })();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":82,"name":"DataLogix - Legacy","content":"<script>\r\n    (function() {\r\n        var kuid = Krux('get', 'user');\r\n        if (kuid) {\r\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\r\n            var kurl_params = encodeURIComponent(\"_kuid=\" + kuid + \"&_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&dlxid=<na_id>&dlxdata=<na_da>\");\r\n            var kurl = prefix + \"//beacon.krxd.net/data.gif?\" + kurl_params;\r\n            var dlx_url = '//r.nexac.com/e/getdata.xgi?dt=br&pkey=gpwn29rvapq62&ru=' + kurl;\r\n            var i = new Image();\r\n            i.src = dlx_url;\r\n        }\r\n    })();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true},{"id":153,"name":"Datonics User Match","content":"<script>\r\n(function(){\r\n  var kuid = Krux('get', 'user');\r\n  if (kuid) {\r\n      var datonics_url = 'https://fei.pro-market.net/engine?mimetype=img&du=88&csync=' + kuid;\r\n      var i = new Image();\r\n      i.src = datonics_url;     \r\n  }\r\n})();\r\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","priority":3,"template_replacement":false,"internal":true,"criteria":[],"collects_data":true}],"link":{"adslots":{},"bidders":{}}};
+  
+  for (var i = 0, tags = config.tags, len = tags.length, tag; (tag = tags[i]); ++i) {
+    if (String(tag.id) in cs) {
+      tag.content = cs[tag.id];
+    }
+  }
+
+  
+  var esiGeo = String(function(){/*
+   <esi:include src="/geoip_esi"/>
+  */}).replace(/^.*\/\*[^{]+|[^}]+\*\/.*$/g, '');
+
+  if (esiGeo) {
+    log('Got a request for:', esiGeo, 'adding geo to config.');
+    try {
+      config.geo = w.JSON.parse(esiGeo);
+    } catch (__) {
+      
+      log('Unable to parse geo from:', config.geo);
+      config.geo = {};
+    }
+  }
+
+
+
+  var proxy = (window.Krux && window.Krux.q && window.Krux.q[0] && window.Krux.q[0][0] === 'proxy');
+
+  if (!proxy || true) {
+    
+
+  load('//cdn.krxd.net/ctjs/controltag.js.0631b7d64dbbd3656a8b7368ad227a04', function() {
+    log('Loaded stable controltag resource');
+    Krux('config', config);
+  });
+
+  }
+
+})(window, (function() {
+  var obj = {};
+  
+  return obj;
+})());
