@@ -6,7 +6,7 @@
 
 
 html {
-    background-color: #C67ACE;
+    background-color: #CD7E59;
     font-family: 'Libre Baskerville', serif;
     font-size: 0.95em;
     line-height: 1.5em;
@@ -21,12 +21,12 @@ h1 {
     font-family: 'Courgette', cursive;
     font-weight: normal;
     margin: auto;
-    background: #fff;
-    line-height: 2.5em;
+    background:#D5B9B1;
+    line-height: 2.5em;4
 }
 
 main.wrapper {
-    background-color: white;
+    background-color:#CD7E59;
     overflow: auto;
 }
 
@@ -46,9 +46,9 @@ a {
 }
 
 a:hover {
-    color: #FF9A8C
+    color: #D5B9B1
 ;
-    background-color: #D8F8B7;
+    background-color: #5A6868;
     text-decoration: none;
 }
 
